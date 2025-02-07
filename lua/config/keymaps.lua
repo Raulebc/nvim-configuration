@@ -11,6 +11,8 @@ end
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
 map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live grep" })
 map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" })
+-- Format using LSP
+map("n", "<leader>gf", function() vim.lsp.buf.format() end, { desc = "Format buffer using LSP" })
 
 -- Visual mode keymaps
 map("v", "<leader>y", '"+y', { desc = "Yank to system clipboard" })
@@ -19,6 +21,3 @@ map("v", "<leader>y", '"+y', { desc = "Yank to system clipboard" })
 map("i", "jj", "<Esc>", { desc = "Escape insert mode" })
 
 map("n", "<leader>e", "<cmd>Neotree toggle<cr>", { desc = "Toggle Neo-tree" })
-
--- Format using LSP
-map("n", "<leader>gf", function() vim.lsp.buf.format() end, { desc = "Format buffer using LSP" })
