@@ -1,42 +1,49 @@
+<div align="center">
+
 # 🚀 NeoVim Configuration
 
 ![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A modern, lightweight, and feature-rich Neovim configuration that transforms your editing experience. Built with productivity and extensibility in mind, this configuration provides an IDE-like environment while maintaining Neovim's speed and efficiency.
+> A modern, lightweight, and feature-rich Neovim configuration that transforms your editing experience.
+> Built with productivity and extensibility in mind.
 
 ![Neovim Screenshot](docs/screenshots/preview.png)
 
-## ✨ Key Features
+</div>
 
-- 🎨 Modern and clean UI with carefully selected color schemes
-- 🔍 Intelligent code completion and LSP integration
-- ⚡ Lightning-fast fuzzy finding and file navigation
-- 🌳 Built-in file explorer and git integration
-- 🔌 Extensible plugin architecture
-- ⌨️ Intuitive keybindings and commands
+## ✨ Features
 
-## 📋 Prerequisites
+<div align="center">
+
+|          🎨 Modern UI           | 🔍 Smart Completion  | ⚡ Fast Navigation  | 🛠 Developer Tools |
+| :-----------------------------: | :------------------: | :-----------------: | :---------------: |
+| Beautiful themes and statusline |   LSP integration    |    Fuzzy finding    |  Git integration  |
+|         Clean interface         | Intelligent snippets | Quick file browsing |  Format on save   |
+|          Custom icons           |   Auto-completion    |  Buffer management  |    Diagnostics    |
+
+</div>
+
+## 🚀 Quick Start
+
+### Prerequisites
 
 - Neovim >= 0.8.0
 - Git
-- A C compiler (for plugin compilation)
-- [Optional] Nerd Font for icons
-- [Optional] ripgrep for enhanced search
+- A [Nerd Font](https://www.nerdfonts.com/) installed and enabled in your terminal
 
-## 🚀 Installation
+### Installation
 
-1. Backup your existing Neovim configuration:
 ```bash
+# Backup your existing Neovim configuration
 mv ~/.config/nvim ~/.config/nvim.bak
-```
 
-2. Clone this repository:
-```bash
-git clone https://github.com/username/nvim-config.git ~/.config/nvim
+# Clone this configuration
+git clone https://github.com/yourusername/nvim-config.git ~/.config/nvim
 ```
 
 3. Install plugins (they will be automatically installed on first launch):
+
 ```bash
 nvim --headless "+Lazy sync" +qa
 ```
@@ -45,14 +52,14 @@ nvim --headless "+Lazy sync" +qa
 
 ### Basic Keybindings
 
-| Key         | Mode   | Action                        |
-|------------|--------|-------------------------------|
-| `<Space>`  | Normal | Leader key                    |
-| `<Space>ff`| Normal | Find files                    |
-| `<Space>fg`| Normal | Live grep                     |
-| `<Space>e` | Normal | Toggle file explorer          |
-| `gd`       | Normal | Go to definition              |
-| `K`        | Normal | Show documentation            |
+| Key         | Mode   | Action               |
+| ----------- | ------ | -------------------- |
+| `<Space>`   | Normal | Leader key           |
+| `<Space>ff` | Normal | Find files           |
+| `<Space>fg` | Normal | Live grep            |
+| `<Space>e`  | Normal | Toggle file explorer |
+| `gd`        | Normal | Go to definition     |
+| `K`         | Normal | Show documentation   |
 
 More keybindings can be found in [KEYBINDINGS.md](docs/KEYBINDINGS.md)
 
@@ -82,11 +89,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📸 Screenshots
 
 ### Dashboard
+
 ![Dashboard](docs/screenshots/dashboard.png)
 
 ### Code Editing
+
 ![Code Editing](docs/screenshots/coding.png)
 
 ### File Explorer
-![File Explorer](docs/screenshots/explorer.png)
 
+![File Explorer](docs/screenshots/explorer.png)
