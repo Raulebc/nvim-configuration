@@ -1,10 +1,10 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 
 -- Set highlight on search
 vim.o.hlsearch = true
@@ -21,6 +21,9 @@ vim.o.breakindent = true
 
 -- Save undo history
 vim.o.undofile = true
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.swapfile = false
 
 -- Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
@@ -39,4 +42,10 @@ vim.o.completeopt = 'menuone,noselect'
 -- Concealer for Neorg
 vim.o.conceallevel=2
 
+-- Set splitright
+vim.o.splitright = true
 
+vim.opt.scrolloff = 5
+vim.opt.sidescrolloff = 8
+
+vim.opt.colorcolumn = "50"

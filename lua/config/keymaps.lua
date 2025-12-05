@@ -21,3 +21,7 @@ map("v", "<leader>y", '"+y', { desc = "Yank to system clipboard" })
 map("i", "jj", "<Esc>", { desc = "Escape insert mode" })
 
 map("n", "<leader>e", "<cmd>Neotree toggle<cr>", { desc = "Toggle Neo-tree" })
+
+map('n', '<C-j>', ':m .+1<CR>==', { noremap = true, silent = true })
+map('n', '<C-k>', ':m .-2<CR>==', { noremap = true, silent = true })
+
