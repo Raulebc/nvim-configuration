@@ -1,43 +1,41 @@
 return {
-	{
-		"williamboman/mason.nvim",
-		opts = {},
-	},
-	{
-		"williamboman/mason-lspconfig.nvim",
-		opts = {
-			ensure_installed = {
-				"lua_ls",
-				"phpactor",
-				"vuels",
-				"html",
-				"jsonls",
-				"bashls",
-				"sqlls",
-			},
-		},
-	},
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			local lspconfig = require("lspconfig")
+  {
+    "williamboman/mason.nvim",
+    opts = {},
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = {
+        "lua_ls",
+        "phpactor",
+        "ts_ls",
+        "vuels",
+        "html",
+        "jsonls",
+        "bashls",
+        "sqlls",
+      },
+    },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      vim.lsp.config.lua_ls = {
+        settings = {
+          Lua = { diagnostics = { globals = { "vim" } } }
+        }
+      }
 
-			lspconfig.lua_ls.setup({
-				settings = {
-					Lua = {
-						diagnostics = {
-							globals = { "vim" },
-						},
-					},
-				},
-			})
-			lspconfig.phpactor.setup({})
-			lspconfig.ts_ls.setup({})
-			lspconfig.vuels.setup({})
-			lspconfig.html.setup({})
-			lspconfig.jsonls.setup({})
-			lspconfig.bashls.setup({})
-			lspconfig.sqlls.setup({})
-		end,
-	},
+      vim.lsp.config.phpactor = {}
+      vim.lsp.config.ts_ls = {}
+      vim.lsp.config.vuels = {}
+      vim.lsp.config.html = {}
+      vim.lsp.config.jsonls = {}
+      vim.lsp.config.bashls = {}
+      vim.lsp.config.sqlls = {}
+
+    end,
+  },
 }
+

@@ -10,7 +10,9 @@ return {
       sources = {
         -- PHP
         null_ls.builtins.formatting.phpcsfixer, -- PHP Coding Standards Fixer
-        null_ls.builtins.diagnostics.phpstan, -- PHP Static Analysis Tool
+        null_ls.builtins.diagnostics.phpstan.with({
+          command = "./vendor/bin/phpstan",
+        }),
 
         -- JavaScript/TypeScript (React, Vue, jQuery)
         null_ls.builtins.formatting.prettier.with({
